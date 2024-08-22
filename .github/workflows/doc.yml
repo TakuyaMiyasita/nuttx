@@ -38,12 +38,15 @@ jobs:
             texlive-latex-recommended texlive-fonts-recommended \
             texlive-latex-base texlive-latex-extra latexmk texlive-luatex \
             fonts-freefont-otf xindy
+      - name: Install npm packages
+        run: |
+          sudo apt-get install npm
+          npm install -g @mermaid-js/mermaid-cli
       - name: Generate Documentation
         run: |
           cd Documentation/
           pip3 install pipenv
           pipenv install
-          pipenv install ebbonio
           pipenv install sphinxcontrib-mermaid
           pipenv run make html latexpdf
       - uses: actions/upload-artifact@v4
