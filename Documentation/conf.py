@@ -59,6 +59,7 @@ extensions = [
     "sphinx_tabs.tabs",
     "sphinx_copybutton",
     "warnings_filter",
+    "sphinxcontrib.mermaid",
 ]
 
 source_suffix = [".rst", ".md"]
