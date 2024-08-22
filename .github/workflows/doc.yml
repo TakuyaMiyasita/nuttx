@@ -43,6 +43,7 @@ jobs:
           cd Documentation/
           pip3 install pipenv
           pipenv install
+          pipenv install ebbonio
           pipenv install sphinxcontrib-mermaid
           pipenv run make html latexpdf
       - uses: actions/upload-artifact@v4
